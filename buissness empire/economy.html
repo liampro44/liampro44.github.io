@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Empire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Business Empire</h1>
+
+        <div class="headertext">
+            <div class="money">
+                <img src="circle-euro.svg" alt="">
+                <div class="stattext">
+                    <span class="moneydisplay"></span>
+                    <p class="moneytot">Total cash</p>
+                </div>
+            </div>
+
+            <div class="value">
+                <img src="factory.svg" alt="">
+                <div class="stattext">
+                    <span class="valuedisplay"></span>
+                    <p class="valuetot">Total value</p>
+                </div>
+            </div>
+
+            <div class="reset">
+                <img src="reset.svg" alt="">
+                <div class="stattext">
+                    <span class="resetdisplay"></span>
+                    <p class="resettot">Resets</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            
+                <a href="dashboard.html" class="dashboard">
+                    <img src="layout-dashboard .svg" alt="">
+                    <p>Dashboard</p>
+                </a>
+
+                <a href="businesses.html" class="businesses">
+                    <img src="building-complex.svg" alt="">
+                    <p>businesses</p>
+                </a>
+
+                <a href="uppgrades.html" class="uppgrades">
+                    <img src="circle-fading-arrow-up.svg" alt="">
+                    <p>Uppgrades</p>
+                </a>
+
+                <a href="economy.html" class="economy active">
+                    <img src="circle-euro (white).svg" alt="">
+                    <p>Economy</p>
+                </a>
+
+                <a href="settings.html" class="settings">
+                    <img src="settings.svg" alt="">
+                    <p>Settings</p>
+                </a>
+
+            </div>
+
+            <div class="content">
+                <h3>Economy</h3>
+                <div class="economycontent">
+                    <div class="economybox">
+                        
+                        <div class="list">
+                            <h6>Your economy</h6>
+                            <div class="row">
+                                <p class="text">Companies Owned</p>
+                                <span class="stat" id="companiesOwned"></span>
+                            </div>
+
+                            <div class="row">
+                                <p class="text">Total Earned</p>
+                                <span class="stat" id="totalEarned"></span>
+                            </div>
+
+                            <div class="row">
+                                <p class="text">Total Value</p>
+                                <span class="stat" id="totalValue"></span>
+                            </div>
+
+                            <div class="row">
+                                <p class="text">Total Hourly Income</p>
+                                <span class="stat" id="totalHourlyIncome"></span>
+                            </div>
+
+                            <div class="row">
+                                <p class="text">Total Expenses</p>
+                                <span class="stat" id="totalExpenses"></span>
+                            </div>
+
+                            <div class="row">
+                                <p class="text">Activities Active</p>
+                                <span class="stat" id="activitiesActive"></span>
+                            </div>
+
+                            <div class="row">
+                                <p class="text">Upgrades Active</p>
+                                <span class="stat" id="uppgradesActive"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>

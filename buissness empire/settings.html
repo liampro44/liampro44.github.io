@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Empire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Business Empire</h1>
+
+        <div class="headertext">
+            <div class="money">
+                <img src="circle-euro.svg" alt="">
+                <div class="stattext">
+                    <span class="moneydisplay"></span>
+                    <p class="moneytot">Total cash</p>
+                </div>
+            </div>
+
+            <div class="value">
+                <img src="factory.svg" alt="">
+                <div class="stattext">
+                    <span class="valuedisplay"></span>
+                    <p class="valuetot">Total value</p>
+                </div>
+            </div>
+
+            <div class="reset">
+                <img src="reset.svg" alt="">
+                <div class="stattext">
+                    <span class="resetdisplay"></span>
+                    <p class="resettot">Resets</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            
+                <a href="dashboard.html" class="dashboard">
+                    <img src="layout-dashboard .svg" alt="">
+                    <p>Dashboard</p>
+                </a>
+
+                <a href="businesses.html" class="businesses">
+                    <img src="building-complex.svg" alt="">
+                    <p>businesses</p>
+                </a>
+
+                <a href="uppgrades.html" class="uppgrades">
+                    <img src="circle-fading-arrow-up.svg" alt="">
+                    <p>Uppgrades</p>
+                </a>
+
+                <a href="economy.html" class="economy">
+                    <img src="circle-euro (white).svg" alt="">
+                    <p>Economy</p>
+                </a>
+
+                <a href="settings.html" class="settings active">
+                    <img src="settings.svg" alt="">
+                    <p>Settings</p>
+                </a>
+
+            </div>
+
+            <div class="content">
+                <h3>Settings</h3>
+                <div class="settingscontent">
+                    <div class="settingsbox">
+                        <div class="list">
+                            <h6>Your Settings</h6>
+
+                            <p class="middletext">General</p>
+
+                            <div class="row">
+                                <p>Confirm Purchases</p>
+                                <input type="checkbox" class="checkbox" id="autoconfirm">
+                            </div>
+
+                            <p class="middletext">Color Settings</p>
+
+                            <div class="row">
+                                <p>Color template</p>
+                                <select id="colorTemplate">
+                                    <option value="Default" selected>Default</option>
+                                    <option value="red">Fire</option>
+                                    <option value="blue">Ocean</option>
+                                    <option value="pink">Pink</option>
+                                    <option value="green">Forrest</option>
+                                </select>
+                            </div>
+
+                            <p class="middletext">Advanced Color Settings</p>
+
+                            <div class="row">
+                                <p>Text Color</p>
+                                <input type="color" class="color" id="textcolor">
+                            </div>
+
+                            <div class="row">
+                                <p>Background Color</p>
+                                <input type="color" id="backgroundcolor">
+                            </div>
+
+                            <div class="row">
+                                <p>Header And Sidebar Background</p>
+                                <input type="color" id="header_sidebar">
+                            </div>
+
+                            <div class="row">
+                                <p>Active Sidebar</p>
+                                <input type="color" id="sidebaractive">
+                            </div>
+
+                            <div class="row">
+                                <p>Glow</p>
+                                <input type="color" id="glow">
+                            </div>
+
+                            <div class="row">
+                                <p>Boxes</p>
+                                <input type="color" id="boxes">
+                            </div>
+
+                            <div class="row">
+                                <p>Purchased</p>
+                                <input type="color" id="purchased">
+                            </div>
+
+                            <p class="middletext">Reset Options</p>
+
+                            <div class="row">
+                                <p>Reset</p>
+                                <span class="Resetbtns">
+                                    <button id="settingsReset">Reset Settings</button>
+                                    <button id="progressReset" title="Reset ALL your progress">Reset Progress</button>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>

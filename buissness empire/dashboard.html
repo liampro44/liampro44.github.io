@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Empire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Business Empire</h1>
+
+        <div class="headertext">
+
+            <div class="money">
+                <img src="circle-euro.svg" alt="">
+                <div class="stattext">
+                    <span class="moneydisplay"></span>
+                    <p class="moneytot">Total cash</p>
+                </div>
+            </div>
+
+            <div class="value">
+                <img src="factory.svg" alt="">
+                <div class="stattext">
+                    <span class="valuedisplay"></span>
+                    <p class="valuetot">Total value</p>
+                </div>
+            </div>
+
+            <div class="reset">
+                <img src="reset.svg" alt="">
+                <div class="stattext">
+                    <span class="resetdisplay"></span>
+                    <p class="resettot">Resets</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            
+                <a href="dashboard.html" class="dashboard active">
+                    <img src="layout-dashboard .svg" alt="">
+                    <p>Dashboard</p>
+                </a>
+
+                <a href="businesses.html" class="businesses">
+                    <img src="building-complex.svg" alt="">
+                    <p>businesses</p>
+                </a>
+
+                <a href="uppgrades.html" class="uppgrades">
+                    <img src="circle-fading-arrow-up.svg" alt="">
+                    <p>Uppgrades</p>
+                </a>
+
+                <a href="economy.html" class="economy">
+                    <img src="circle-euro (white).svg" alt="">
+                    <p>Economy</p>
+                </a>
+
+                <a href="settings.html" class="settings">
+                    <img src="settings.svg" alt="">
+                    <p>Settings</p>
+                </a>
+
+            </div>
+
+        <div class="content">
+            <h3>Dashboard</h3>
+            <div class="companycontent">
+
+                <div id="school" class="companycard">
+
+                    <div class="cardtop">
+                        <h2>School</h2>
+                        <p>5 000€</p>
+                    </div>
+
+                    <img class="schoolimg" src="school.png" alt="">
+                    <button id="schoolinsp" class="inspect">inspect</button>
+                </div>
+
+                <div id="store" class="companycard">
+                    <div class="cardtop">
+                        <h2>Store</h2>
+                        <p>15 000€</p>
+                    </div>
+                    <img class="storeimg" src="store.png" alt="">
+                    <button id="storeinsp" class="inspect">inspect</button>
+                </div>
+                
+                <div id="factory" class="companycard">
+                    <div class="cardtop">
+                        <h2>Factory</h2>
+                        <p>40 000€</p>
+                    </div>
+                    <img class="factoryimg" src="factory.png" alt="">
+                    <button id="factoryinsp" class="inspect">inspect</button>
+                </div>
+                
+                <div id="bakery" class="companycard">
+                    <div class="cardtop">
+                        <h2>Bakery</h2>
+                        <p>80 000€</p>
+                    </div>
+                    <img class="bakeryimg" src="bakery.png" alt="">
+                    <button id="bakeryinsp" class="inspect">inspect</button>
+                </div>
+
+                <div id="warehouse" class="companycard">
+                    <div class="cardtop">
+                        <h2>Warehouse</h2>
+                        <p>200 000€</p>
+                    </div>
+                    <img class="warehouseimg" src="warehouse.png" alt="">
+                    <button id="warehouseinsp" class="inspect">inspect</button>
+                </div>
+
+                <div id="bank" class="companycard">
+                    <div class="cardtop">
+                        <h2>Bank</h2>
+                        <p>500 000€</p>
+                    </div>
+                    <img class="bankimg" src="bank.png" alt="">
+                    <button id="bankinsp" class="inspect">inspect</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="overlay">
+            <p title="exit" class="exit">✕</p>
+            <div class="popup">
+                <h1 class="companyname"></h1>
+                <img class="popupimg" src="" alt="">
+                <button class="cardbtn">Build <span id="cost"></span></button>
+
+                <p>Buildtime: 
+                    <span id="Buildtime"></span>
+                </p>
+                <p>
+                    Income:
+                    <span id="income"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
