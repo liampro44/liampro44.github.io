@@ -1,6 +1,10 @@
+let firstTime = true
+
+if(localStorage.getItem("money")){
+    firstTime = false
+}
 
 //VARIABLER
-
 //header
 
 let moneydisplay = document.querySelector(".moneydisplay");
@@ -150,12 +154,17 @@ allCompanies.forEach(company => {
 //user
 
 let user = {
-    money: Number(localStorage.getItem("money")) || 15000,
+    money: Number(localStorage.getItem("money")) || 0,
     totvalue: Number(localStorage.getItem("value")) || 0,
     totearned: Number(localStorage.getItem("totearned")) || 0,
     totexpenses: Number(localStorage.getItem("totexpenses")) || 0,
     reboots: Number(localStorage.getItem("reboots")) || 0
 };
+
+if(firstTime === true){
+    user.money = 15000
+    localStorage.setItem("money", 15000)
+}
 
 let BuildsInProgress =JSON.parse(localStorage.getItem("BuildsInProgress")) || [];
 
@@ -1273,9 +1282,4 @@ setInterval(updateCountdown, 1000);
 setInterval(updateEarned, 1000);
 setInterval(updateEconomy, 1000);
 setInterval(updatecolors, 1000)
-
-window.addEventListener("beforeunload", () => {
-    localStorage.setItem("lastPayTime", Date.now());
-});
-
 
