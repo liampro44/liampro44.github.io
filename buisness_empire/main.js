@@ -323,7 +323,8 @@ let activitycost = 5000
 let activityprocentage = 1.05;
 let currentcompany;
 let paytime = localStorage.getItem("paytime") || 45000;
-let lastPayTime = Number(localStorage.getItem("lastPayTime")) || Date.now();
+let activeTime = Number(localStorage.getItem("activeTime")) || 0;
+let lastTick = Date.now();
 let paytimeminutes = paytime / 1000 + "s";
 let earnednumber;
 let activatebtn;
@@ -500,14 +501,13 @@ function updateIncome() {
 }
 
 function earnMoney() {
-
     let currentTime = Date.now();
-    let timePassed = currentTime - lastPayTime;
+    let timePassed = currentTime - lastTick;
+    activeTime += timePassed;
+    lastTick = currentTime;
+    let payments = Math.floor(activeTime / paytime);
 
-    let payments = Math.floor(timePassed / paytime);
-
-    if(payments >= 1) {
-
+    if (payments >= 1) {
         user.money += userincome * payments;
         user.totearned += userincome * payments;
 
@@ -515,14 +515,15 @@ function earnMoney() {
             company.earned += company.income * payments;
         });
 
-        lastPayTime += payments * paytime;
+        activeTime -= payments * paytime;
 
-        localStorage.setItem("lastPayTime", lastPayTime);
         localStorage.setItem("ownedCompanies", JSON.stringify(ownedCompanies));
-
         updateuser();
     }
+    localStorage.setItem("activeTime", activeTime);
 }
+
+setInterval(earnMoney, 1000);
 
 earnMoney();
 setInterval(earnMoney, 1000);
