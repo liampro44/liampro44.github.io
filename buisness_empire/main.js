@@ -322,7 +322,7 @@ let resetProgressBtn = document.getElementById("progressReset")
 let activitycost = 5000
 let activityprocentage = 1.05;
 let currentcompany;
-let paytime = localStorage.getItem("paytime") || 60000;
+let paytime = localStorage.getItem("paytime") || 45000;
 let lastPayTime = Number(localStorage.getItem("lastPayTime")) || Date.now();
 let paytimeminutes = paytime / 1000 + "s";
 let earnednumber;
@@ -1282,4 +1282,3 @@ setInterval(updateCountdown, 1000);
 setInterval(updateEarned, 1000);
 setInterval(updateEconomy, 1000);
 setInterval(updatecolors, 1000)
-
